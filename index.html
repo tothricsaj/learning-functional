@@ -5,7 +5,7 @@
     </head>
     <body>
         <h2>Console output</h2>
-        <ul>
+        <ul class="outputOnDOM">
 
         </ul>
 
@@ -15,6 +15,7 @@
             console.log = function(){
                 console.logs.push(Array.from(arguments));
                 console.stdlog.apply(console, arguments);
+                document.querySelector('.outputOnDOM').insertAdjacentHTML('beforeend', `<li>${console.logs[console.logs.length - 1]}</li>`)
             }
         </script>
         <script type="module" src="./lib/es8-functional.js"></script>
