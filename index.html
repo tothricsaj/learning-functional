@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>Learn functional</title>
     </head>
     <body>
+        <h2>Console output</h2>
+        <ul>
+
+        </ul>
 
         <script>
             console.stdlog = console.log.bind(console);
@@ -13,5 +17,7 @@
                 console.stdlog.apply(console, arguments);
             }
         </script>
+        <script type="module" src="./lib/es8-functional.js"></script>
+        <script type="module" src="./functional-playground/play.js"></script>
     </body>
 </html>
