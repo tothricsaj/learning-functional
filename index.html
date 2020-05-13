@@ -15,9 +15,11 @@
             console.stdlog = console.log.bind(console);
             console.logs = [];
             console.log = function(){
+                let myDate = new Date()
+                let consoleDate = `${myDate.getHours()}:${myDate.getMinutes()}:${myDate.getSeconds()}`
                 console.logs.push(Array.from(arguments));
                 console.stdlog.apply(console, arguments);
-                document.querySelector('.outputOnDOM').insertAdjacentHTML('beforeend', `<li>${console.logs[console.logs.length - 1]}</li>`)
+                document.querySelector('.outputOnDOM').insertAdjacentHTML('beforeend', `<li>[${consoleDate}]root@localhost.com$ ${console.logs[console.logs.length - 1]}</li>`)
             }
 
             document.querySelector('.clearConsole').addEventListener('click', (e) => {
