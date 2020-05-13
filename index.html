@@ -19,6 +19,10 @@
                 console.stdlog.apply(console, arguments);
                 document.querySelector('.outputOnDOM').insertAdjacentHTML('beforeend', `<li>${console.logs[console.logs.length - 1]}</li>`)
             }
+
+            document.querySelector('.clearConsole').addEventListener('click', (e) => {
+                document.querySelector('.outputOnDOM').textContent = ''
+            })
         </script>
         <script type="module" src="./lib/es8-functional.js"></script>
         <script type="module" src="./functional-playground/play.js"></script>

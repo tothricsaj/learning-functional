@@ -1,4 +1,13 @@
-ul {
+body {
+    background-color: orange;
+}
+
+.outputOnDOM {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #333;
+    color: paleturquoise;
     list-style: none;
 }
 
