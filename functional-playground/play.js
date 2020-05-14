@@ -1,4 +1,4 @@
-import { forEach, forEachObject, unless, every } from '../lib/es8-functional.js'
+import { forEach, forEachObject, unless, every, some } from '../lib/es8-functional.js'
 
 let array = [1,2,3,4]
 forEach(array, (data) => console.log(data))
@@ -16,3 +16,8 @@ console.log('/////// every function ///////')
 
 console.log(every([NaN, NaN, NaN], isNaN))
 console.log(every(['foo', 'foo', 'fooBAr'], (data) => data==='foo' || data==='fooBar' ? true : false))
+
+console.log('/////// some function ///////')
+console.log(some([3, 3, 4], isNaN))
+console.log(some([2,1,'foo'], (data) => data==='foo' || data==='fooBar' ? true : false))
+
