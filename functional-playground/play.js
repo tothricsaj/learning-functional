@@ -1,4 +1,4 @@
-import { forEach, forEachObject, unless, every, some, tap, unary } from '../lib/es8-functional.js'
+import { forEach, forEachObject, unless, every, some, tap, unary, once } from '../lib/es8-functional.js'
 
 let array = [1,2,3,4]
 forEach(array, (data) => console.log(data))
@@ -25,4 +25,18 @@ console.log('/////// tap function ///////')
 tap('fun')((it) => console.log('value is ', it))
 console.log('/////// unary function ///////')
 console.log(['1','2','3'].map(unary(parseInt)))
+
+console.log('/////// once function ///////')
+let doPayment = once(() => {console.log('Payment is done')})
+doPayment()
+doPayment()
+
+let counter = 0
+let incraseCounter = once(() => {counter++})
+incraseCounter()
+console.log(`counter -> ${counter}`)
+incraseCounter()
+console.log(`counter -> ${counter}`)
+incraseCounter()
+console.log(`counter -> ${counter}`)
 
