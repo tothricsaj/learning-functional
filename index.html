@@ -19,7 +19,10 @@
                 let consoleDate = `${myDate.getHours()}:${myDate.getMinutes()}:${myDate.getSeconds()}`
                 console.logs.push(Array.from(arguments));
                 console.stdlog.apply(console, arguments);
-                document.querySelector('.outputOnDOM').insertAdjacentHTML('beforeend', `<li>[${consoleDate}]root@localhost.com$ ${console.logs[console.logs.length - 1]}</li>`)
+                document.querySelector('.outputOnDOM').insertAdjacentHTML(
+                    'beforeend', 
+                    `<li><span class="consoleDate">[${consoleDate}]</span>root@localhost.com$ <span class="consoleMsg">${console.logs[console.logs.length - 1]}</span></li>`
+                )
             }
 
             document.querySelector('.clearConsole').addEventListener('click', (e) => {

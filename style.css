@@ -21,3 +21,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.consoleDate{
+    color: lightgreen;
+}
+
+.consoleMsg {
+    color: lightgray
+}
+
