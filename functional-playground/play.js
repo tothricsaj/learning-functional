@@ -1,4 +1,4 @@
-import { forEach, forEachObject, unless, every, some, tap, unary, once } from '../lib/es8-functional.js'
+import { forEach, forEachObject, unless, every, some, tap, unary, once, memoize } from '../lib/es8-functional.js'
 
 let array = [1,2,3,4]
 forEach(array, (data) => console.log(data))
@@ -40,3 +40,11 @@ console.log(`counter -> ${counter}`)
 incraseCounter()
 console.log(`counter -> ${counter}`)
 
+console.log('/////// memoize function ///////')
+let factorial = memoize((n) => {
+    if(n===0) return 1
+
+    return n*factorial(n-1)
+})
+
+console.log(factorial(5))
