@@ -12,6 +12,7 @@ import {
     filter,
     concatAll,
     reduce,
+    zip,
 } from './lib/es8-functional.js'
 
 window.myLib = {
@@ -27,5 +28,6 @@ window.myLib = {
     map: map,
     filter: filter,
     concatAll: concatAll,
-    reduce: reduce
+    reduce: reduce,
+    zip: zip,
 }
