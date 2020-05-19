@@ -10,6 +10,8 @@ import {
     memoize,
     map,
     filter,
+    concatAll,
+    reduce,
 } from './lib/es8-functional.js'
 
 window.myLib = {
@@ -23,5 +25,7 @@ window.myLib = {
     once: once,
     memoize: memoize,
     map: map,
-    filter: filter
+    filter: filter,
+    concatAll: concatAll,
+    reduce: reduce
 }
