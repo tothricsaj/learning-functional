@@ -1,4 +1,16 @@
-import { forEach, forEachObject, unless, every, some, tap, unary, once, memoize, map } from './lib/es8-functional.js'
+import {
+    forEach,
+    forEachObject,
+    unless,
+    every,
+    some,
+    tap,
+    unary,
+    once,
+    memoize,
+    map,
+    filter,
+} from './lib/es8-functional.js'
 
 window.myLib = {
     forEachObject: forEachObject,
@@ -10,5 +22,6 @@ window.myLib = {
     unary: unary,
     once: once,
     memoize: memoize,
-    map: map
+    map: map,
+    filter: filter
 }
