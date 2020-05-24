@@ -13,6 +13,7 @@ import {
     concatAll,
     reduce,
     zip,
+    compose,
 } from './lib/es8-functional.js'
 
 window.myLib = {
@@ -30,4 +31,5 @@ window.myLib = {
     concatAll: concatAll,
     reduce: reduce,
     zip: zip,
+    compose: compose
 }
