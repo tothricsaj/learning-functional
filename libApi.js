@@ -14,6 +14,7 @@ import {
     reduce,
     zip,
     compose,
+    partial,
 } from './lib/es8-functional.js'
 
 window.myLib = {
@@ -31,5 +32,6 @@ window.myLib = {
     concatAll: concatAll,
     reduce: reduce,
     zip: zip,
-    compose: compose
+    compose: compose,
+    partial: partial
 }
