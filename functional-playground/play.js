@@ -1,5 +1,6 @@
-import { forEach, forEachObject, unless, every, some, tap, unary, once, memoize } from '../lib/es8-functional.js'
+import { forEach, forEachObject, unless, every, some, tap, unary, once, memoize, compose } from '../lib/es8-functional.js'
 
+/*
 let array = [1,2,3,4]
 forEach(array, (data) => console.log(data))
 forEach(array, (data) => data++)
@@ -48,3 +49,10 @@ let factorial = memoize((n) => {
 })
 
 console.log(factorial(5))
+*/
+
+let splitIntoSpaces = (str) => str.split(' ')
+let count = array => array.length
+
+let countWords = compose(count, splitIntoSpaces)
+console.log(countWords('foo bar baz fooBArBAz'))
