@@ -1,4 +1,4 @@
-import { forEach, forEachObject, unless, every, some, tap, unary, once, memoize, compose } from '../lib/es8-functional.js'
+import { forEach, forEachObject, unless, every, some, tap, unary, once, memoize, compose, composeN } from '../lib/es8-functional.js'
 
 /*
 let array = [1,2,3,4]
@@ -52,7 +52,11 @@ console.log(factorial(5))
 */
 
 let splitIntoSpaces = (str) => str.split(' ')
-let count = array => array.length
+let count = (array) => array.length
+let oddOrEven = (ip) => ip%2==0 ? 'even' : 'odd'
 
 let countWords = compose(count, splitIntoSpaces)
 console.log(countWords('foo bar baz fooBArBAz'))
+
+let oddOrEvenWords = composeN(oddOrEven, count, splitIntoSpaces)
+console.log(oddOrEvenWords('foo bar baz'))

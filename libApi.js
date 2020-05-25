@@ -15,6 +15,7 @@ import {
     zip,
     compose,
     partial,
+    composeN,
 } from './lib/es8-functional.js'
 
 window.myLib = {
@@ -33,5 +34,6 @@ window.myLib = {
     reduce: reduce,
     zip: zip,
     compose: compose,
-    partial: partial
+    partial: partial,
+    composeN: composeN
 }
