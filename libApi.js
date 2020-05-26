@@ -18,6 +18,7 @@ import {
     composeN,
     pipe,
     Container,
+    MayBe,
 } from './lib/es8-functional.js'
 
 window.myLib = {
@@ -39,5 +40,6 @@ window.myLib = {
     partial: partial,
     composeN: composeN,
     pipe: pipe,
-    Container: Container
+    Container: Container,
+    Maybe: MayBe
 }
