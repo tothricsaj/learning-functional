@@ -1,6 +1,4 @@
-import { reduce } from "./lib/es8-functional"
-
-let initialStat = {counter: 0}
+let initialState = {counter: 0}
 function reducer(state, action) {
     if(action.type = 'INCREMENT') state = Object.assign({}, state, {counter: state.counter + 1})
     return state
@@ -47,3 +45,13 @@ function createStore(reducer, preloadedState) {
         subscribe
     }
 }
+
+function render(state) {document.getElementById('counter').textContent = state.counter}
+
+store.subscribe(function() {
+    render(store.getState())
+})
+
+let store = createStore(reducer, initialState)
+
+function loadRedux() {render(store.getState())}
