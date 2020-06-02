@@ -1,4 +1,6 @@
 let initialState = {counter: 0}
+let store = createStore(reducer, initialState)
+
 function reducer(state, action) {
     if(action.type = 'INCREMENT') state = Object.assign({}, state, {counter: state.counter + 1})
     return state
@@ -13,7 +15,7 @@ function incrementCounter() {
 }
 
 function createStore(reducer, preloadedState) {
-    let currentReducer = reduce
+    let currentReducer = reducer
     let currentState = preloadedState
     let currentListeners = []
     let nextListeners = currentListeners
@@ -28,7 +30,7 @@ function createStore(reducer, preloadedState) {
         const listeners = currentListeners = nextListeners
 
         for(let i=0; i<listeners.length; i++) {
-            const listener = listener[i]
+            const listener = listeners[i]
             listener()
         }
 
@@ -52,6 +54,5 @@ store.subscribe(function() {
     render(store.getState())
 })
 
-let store = createStore(reducer, initialState)
 
 function loadRedux() {render(store.getState())}
