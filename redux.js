@@ -1,0 +1,1 @@
+let initialStat = {counter: 0}
